@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Services";
+
+
+    List<Persona> personas = (List<Persona>)ViewBag.ListadoPersonas;
+
+}
+
+<h1>Servicios</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Nombre Completo</td>
+            <td>Correo Electrónico</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Persona item in personas)
+        {
+        <tr>
+            <td>@item.personaID</td>
+            <td>@item.personaNombre</td>
+            <td>@item.personaCorreo</td>
+        </tr>
+        }
+
+    </tbody>
+
+</table>
+
